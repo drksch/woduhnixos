@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.ninjaFortCfg = { pkgs, lib, ... }: {
+  flake.modules.nixos.ninjaFortCfg = { pkgs, lib, ... }: {
     imports = [
       ./hardware-configuration.nix
       ./envnpkgs.nix

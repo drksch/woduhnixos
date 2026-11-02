@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.starship = { pkgs, lib, ... }: {
+  flake.modules.nixos.starship = { pkgs, lib, ... }: {
     programs.starship = {
       enable = "true";
       packages = self.packages.${pkgs.stdenv.hostPlatfrom.system}.myStarship;

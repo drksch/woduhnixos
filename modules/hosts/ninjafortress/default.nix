@@ -1,8 +1,8 @@
-{ self, inputs, ... }: {
+ self, inputs, ... }: {
 
   flake.nixosConfigurations.ninjaFortress = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.nixosModules.ninjaFortCfg
+      self.modules.nixos.ninjaFortCfg
     ];
   };
   
